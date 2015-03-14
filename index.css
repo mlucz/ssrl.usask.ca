@@ -1,0 +1,39 @@
+div.ssrl_labinfo {
+  background: #f2f2f2;
+  margin-top: 1px;
+}
+
+img.ssrl_headericon {
+  width: 24px;
+  height: 24px;
+}
+
+div.ssrl_labheaders {
+  vertical-align: middle;
+  background: #cccccc;
+  height: 30px;
+  padding: 8px 4px 4px 4px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+div.ssrl_labheaders > img {
+  padding-left: 4px;
+  padding-right: 6px;
+  float: left;
+}
+
+span.ssrl_labtitle {
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+div.ssrl_labdetails {
+  display: none;
+  padding: 0 10px 5px 10px;
+  margin-bottom: 8px;
+}
+
+div.ssrl_labdetails > p {
+  margin: 13px 40px 13px 40px;
+}

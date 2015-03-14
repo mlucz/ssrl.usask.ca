@@ -1,0 +1,21 @@
+create table survey(
+	nsid varchar(6) PRIMARY KEY,
+	class varchar(10),
+	savvines int,
+	virus varchar(10),
+	victim varchar(10),
+	victimkind text,
+	othervic varchar(10),
+	othervickind text
+	);
+	
+create table terms (
+	nsid varchar(6) not null,
+	term varchar(15) not null,
+	PRIMARY KEY (nsid,term)
+	);
+	
+	ALTER TABLE terms
+    ADD CONSTRAINT FOREIGN KEY
+    FK (nsid)
+    REFERENCES survey (nsid);

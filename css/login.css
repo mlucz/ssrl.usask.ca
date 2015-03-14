@@ -1,0 +1,123 @@
+#login {
+        margin: 0 auto;
+        max-width: 280px;
+        overflow: hidden;
+        position: relative
+    }
+    #login .btn {
+        display: block;
+        width: 100%;
+        margin: 1em auto 2em;
+        padding: .65em 1em;
+        font-size: 1.1em;
+        font-weight: 600
+    }
+    #login form {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0
+    }
+    #login label span.accesskey {
+        text-decoration: underline
+    }
+    #login input {
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+    .ie7 #login input {
+        height: 20px
+    }
+    #login input,
+    #login .btn {
+        font-size: 1.1em;
+        height: 2.75em;
+        width: 100%;
+        margin: .5em 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+    #login .btn-row {
+        position: relative
+    }
+    #status,
+    #msg {
+        text-align: center
+    }
+    #status.text-error {
+        font-weight: 600
+    }
+    .row {
+        margin: 0 auto
+    }
+   
+    .timedout h2 {
+        margin: 1.2em 0 0
+    }
+    .timedout p {
+        color: #777;
+        margin: .5em 0 3em
+    }
+    .password-help {
+        font-size: .9em;
+        margin: 2em auto
+    }
+    .password-help a {
+        display: inline-block;
+        margin: 0 .75em
+    }
+    .downtime,
+    .test-portal,
+    .funfact {
+        margin: 2em auto 0;
+        font-size: .9em;
+        color: #777
+    }
+    .downtime ul {
+        text-align: left;
+        padding: 0
+    }
+    .sitename {
+        display: block;
+        font-size: 28px;
+        line-height: 32px;
+        margin-top: 15px
+    }
+    .sitename > .muted {
+        display: block;
+        font-size: 18px;
+        font-weight: 400
+    }
+	
+	.clearfix {
+    *zoom: 1
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+.clearfix:after {
+    clear: both
+}
+.hide-text {
+    font: 0/0 a;
+    overflow: hidden;
+    position: absolute;
+    top: -99999px;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0
+}
+.input-block-level {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
