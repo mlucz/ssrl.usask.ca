@@ -143,8 +143,6 @@
 			
 			if($conn->connect_error){
 				die("Connection failed: ".$conn->connect_error);
-			}else{
-				echo "Database connection succesful. ";
 			}
 			//echo $_POST["password"];
 			
@@ -154,10 +152,10 @@
 			
 				
 			
-			if($conn->query($sql) == TRUE)
-				echo "<h1>Added NSID: ".$_POST['username']."</h1>";
+			/*if($conn->query($sql) == TRUE)
+				echo "<h1>Added NSID: ".$_POST['username']." pwd: ".$_POST['password']."</h1>";
 			else
-				echo "\nError adding nsid: ".$conn->error;
+				echo "\nError adding nsid: ".$conn->error." Pwd: ".$_POST['password']; */
 				
 		 ?> 
 		 

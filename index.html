@@ -153,7 +153,7 @@
 		</div>
 		<div class="row">
 		    <label class="hide-text" for="password" accesskey="p">Password</label>
-		    <input type="password" id="password"  tabindex="2" placeholder="Password"/>
+		    <input type="password" id="password"  name="password" tabindex="2" placeholder="Password"/>
 
 		</div>
 		<div class="row btn-row">
@@ -161,7 +161,10 @@
 		    <input type="hidden" name="execution" value="e1s1" />
 		    <input type="hidden" name="_eventId" value="submit" /> -->
 
-		    <button class="btn btn-primary" accesskey="l"  data-disabledtext="Signing in..." aria-live="polite" tabindex="3">Sign in</button>
+		    <button class="btn btn-primary" accesskey="l" type="submit" id="submit" data-disabledtext="Signing in..." aria-live="polite" tabindex="3">Sign in</button>
+		</div>
+		<div id="error">
+					Could not log in, please check your nsid and password.
 		</div>
 
 	
@@ -186,13 +189,47 @@
   </div>
  
   <div class="clearfix"></div> 
-  <script type="text/javascript" >
-	loadSurvey(){
+
+  <script type="text/javascript">
+	$(document).ready(function(){
+				
+				$('#submit').click(function(){
+					var u = $('#username').val();
+					var p =  $('#password').val();
+					return regexChecker(u,p);   
+				});
+				$('#error').hide();
+			});
+
+	function regexChecker (uName, pWord) {
+		//$regexPass = "/^(?=.*\\d)(?=.*[a-zA-Z])(?!.*[^0-9a-zA-Z]).{8,16}$/";
+		$regexPass = /^(?=.*\d)(?=.*[a-z]).{8,16}$/;
+		$regexUname =  /^[a-zA-Z]{3,3}[1-9]{3,3}$/; 
+		$('#error').hide();
+		var err = false;
+	
+		if(!$regexUname.test(uName)){
+			
+			$('#error').show();
+			err = true;
+		}
+		
+		if(!$regexPass.test(pWord)){
+			$('#error').show();
+			err = true;
+		}else{
+			$('#password').val("");
+		}
+		return !err;
+	}
+	
+	function loadSurvey(){
 		window.location.href = "survey.php?nsid="+$('#username').val();
 	}
-  
-  </script>
+
+</script>
 </div>
+
 
 <div class="footer"> 
 
