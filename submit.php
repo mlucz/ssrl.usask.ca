@@ -155,7 +155,7 @@
 			if($conn->connect_error){
 				die("Connection failed: ".$conn->connect_error);
 			}else{
-				echo "Database connection succesful. ";
+				//echo "Database connection succesful. ";
 			}
 			//echo $_POST["password"];
 			
@@ -172,14 +172,23 @@
 			$sql .="WHERE nsid = '".$_POST["username"]."'";
 			
 			if($conn->query($sql) == TRUE)
-				echo "<h1>Updated data for NSID: ".$_POST['username']."</h1>";
+				//echo "<h1>Updated data for NSID: ".$_POST['username']."</h1>";
 			else
-				echo "\nError adding nsid: ".$conn->error;
-			/*	
-			$sql = "Insert into terms (nsid,term) 
-						VALUES (
-							".$_POST["username"].",
-							".$_POST["*/
+				//echo "\nError adding nsid: ".$conn->error;
+				
+			$sql = "UPDATE terms SET
+				phish = '".$_POST["phish"]."',
+				whale = '".$_POST["whale"]."',
+				twin = '".$_POST["twin"]."',
+				scam = '".$_POST["419"]."',
+				phreak = '".$_POST["phreak"]."'";
+				
+			$sql .="WHERE nsid = '".$_POST["username"]."'";
+			
+			if($conn->query($sql) == TRUE)
+				//echo "<h1>Updated data for NSID: ".$_POST['username']."</h1>";
+			else
+				//echo "\nError adding nsid: ".$conn->error;
 				
 		 ?> 
 		 

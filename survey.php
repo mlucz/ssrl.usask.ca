@@ -150,8 +150,12 @@
 			
 			
 			
-				
+			// Insert NSID into suvery table and terms table	
+			$conn->query($sql);
 			
+			$sql = "INSERT INTO terms(nsid) VALUES ('".$_POST["username"]."')";
+			
+			$conn->query($sql);
 			/*if($conn->query($sql) == TRUE)
 				echo "<h1>Added NSID: ".$_POST['username']." pwd: ".$_POST['password']."</h1>";
 			else
@@ -272,19 +276,19 @@
 				<p>6. Please select any of the below terms if you've heard them before?</p>
 				<div class="form-group">
 					<div class="checkbox">
-					  <label><input type="checkbox" name="phish" value="">Phishing</label>
+					  <label><input type="checkbox" name="phish" value="1">Phishing</label>
 					</div>
 					<div class="checkbox">
-					  <label><input type="checkbox" name="whale" value="">Whaling</label>
+					  <label><input type="checkbox" name="whale" value="1">Whaling</label>
 					</div>
 					<div class="checkbox">
-					  <label><input type="checkbox" name="phish" value="">Evil Twin</label>
+					  <label><input type="checkbox" name="twin" value="1">Evil Twin</label>
 					</div>
 					<div class="checkbox">
-					  <label><input type="checkbox" name="whale" value="">419 Scams</label>
+					  <label><input type="checkbox" name="419" value="1">419 Scams</label>
 					</div>
 					<div class="checkbox">
-					  <label><input type="checkbox" name="phish" value="">Phreaking</label>
+					  <label><input type="checkbox" name="phreak" value="1">Phreaking</label>
 					</div>
 					<br><br>
 				</div>

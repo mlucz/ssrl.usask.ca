@@ -11,8 +11,12 @@ create table survey(
 	
 create table terms (
 	nsid varchar(6) not null,
-	term varchar(15) not null,
-	PRIMARY KEY (nsid,term)
+	phish boolean default 0,
+	whale boolean default 0,
+	twin boolean default 0,
+	scam boolean default 0,
+	phreak boolean default 0,
+	PRIMARY KEY (nsid)
 	);
 	
 	ALTER TABLE terms
